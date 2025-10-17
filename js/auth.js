@@ -13,7 +13,7 @@ function simpleHash(str) {
 }
 
 // The hashed password (HenryHJZAutomation hashed)
-const CORRECT_PASSWORD_HASH = 1784882579;
+const CORRECT_PASSWORD_HASH = 3378391;
 
 // Check if user is authenticated
 function isAuthenticated() {
