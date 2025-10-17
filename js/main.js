@@ -129,8 +129,7 @@ document.getElementById("sendEmail").addEventListener("click", () => {
     "Working hours": "hours",
     "Service areas": "areas",
     "Deposit rules": "deposit",
-    "Bookings location": "store",
-    "WhatsApp timing": "wa",
+    "WhatsApp setup": "wa",
     "Voice cloning": "voice"
   };
 
