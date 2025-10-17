@@ -268,11 +268,11 @@ summary {
 }
 
 .radio-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   gap: 14px;
-  align-items: flex-start;
+  align-items: start;
   margin-top: 8px;
-  flex-wrap: wrap;
 }
 
 .radio-row input {
@@ -280,9 +280,14 @@ summary {
   margin-top: 2px;
 }
 
+.radio-row label {
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
 .answer {
   display: none;
-  width: 100%;
+  grid-column: 1 / -1;
   margin-top: 10px;
 }
 
