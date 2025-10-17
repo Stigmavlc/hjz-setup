@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HJZ Plumbing — Setup Pack for Henry</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body id="setupPage">
+    <div class="container">
+      <header>
+        <div class="title">
+          <div class="logo">HJZ</div>
+          <div>
+            <h1>HJZ Plumbing — Setup Pack for Henry</h1>
+            <div class="sub">
+              Everything in your name. Clear steps. Tick as you go. Your email
+              for invites is <b>ivanaguilarmari@gmail.com</b>.
+            </div>
+          </div>
+        </div>
+        <div class="bar">
+          <button class="ghost" id="markAll">Mark all complete</button>
+          <button class="ghost" id="resetAll">Reset</button>
+          <button id="sendEmail">Send form to Ivan</button>
+        </div>
+      </header>
+
+      <section class="card">
+        <h3>Tools we will use and why</h3>
+        <div class="tools-list">
+          <div class="tool-item">
+            <span class="tag">ServiceM8</span>
+            <p>
+              Your job board. Keep using it to view, schedule, and manage jobs.
+              We will connect bookings here where possible.
+            </p>
+          </div>
+          <div class="tool-item">
+            <span class="tag">Google Calendar</span>
+            <p>
+              Shared "Jobs" calendar the assistant offers to customers. Easy to
+              see on your phone.
+            </p>
+          </div>
+          <div class="tool-item">
+            <span class="tag">Stripe</span>
+            <p>Deposit and balance links so you get paid faster.</p>
+          </div>
+          <div class="tool-item">
+            <span class="tag">WhatsApp Business</span>
+            <p>
+              Start with the phone app plus WhatsApp Web for quick replies.
+              Later upgrade to the Business Platform if you want automatic
+              reminders and review requests.
+            </p>
+          </div>
+          <div class="tool-item">
+            <span class="tag">ElevenLabs</span>
+            <p>
+              Natural voice for the call-answering assistant. Your voice if you
+              want, with consent.
+            </p>
+          </div>
+          <div class="tool-item">
+            <span class="tag">Data store</span>
+            <p>
+              Google Sheets and Airtable for managing customer data, jobs, and payments. Airtable provides nicer views and forms.
+            </p>
+          </div>
+          <div class="tool-item">
+            <span class="tag">Twilio</span>
+            <p>
+              UK business number with routing and SMS capabilities. WhatsApp Business Platform integration for automatic messaging. Pay-as-you-go pricing.
+            </p>
+          </div>
+          <div class="tool-item">
+            <span class="tag">WordPress</span>
+            <p>
+              Optimize your existing site for better integration with the automation system and improved performance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACCOUNTS AND ACCESS -->
+      <h2 style="margin: 32px 4px 20px">
+        Accounts to use or create, plan to pick, and how to give me access
+      </h2>
+
+      <!-- ServiceM8 -->
+      <section class="card">
+        <h3>ServiceM8 <span class="pill">Keep current plan</span></h3>
+        <p>
+          Use your current account. If we connect the assistant directly, we
+          will use a Private Integration API Key.
+        </p>
+        <div class="steps">
+          <div class="step">
+            <div
+              class="check"
+              data-id="sm8-1"
+              role="checkbox"
+              aria-checked="false"
+              title="Mark complete"
+            ></div>
+            <span
+              ><b>Invite me as staff</b><br />
+              Path
+              <span class="path">Account → Settings → Staff → Invite Staff</span
+              ><br />
+              Enter email <span class="path">ivanaguilarmari@gmail.com</span
+              ><br />
+              Choose a role that can view jobs and Scheduling. We can tighten
+              later.
+            </span>
+          </div>
+          <div class="step">
+            <div
+              class="check"
+              data-id="sm8-2"
+              role="checkbox"
+              aria-checked="false"
+            ></div>
+            <span
+              ><b>Create a Private Integration API Key</b> if we connect
+              directly<br />
+              Path
+              <span class="path"
+                >Settings → API Access / API Keys → New Key</span
+              ><br />
+              Store it in a password manager. Do not email the full key. Share
+              securely.
+            </span>
+          </div>
+        </div>
+        <div class="cta-row small">
+          <button class="copy" data-copy="ivanaguilarmari@gmail.com">
+            Copy invite email
+          </button>
+        </div>
+      </section>
+
+      <!-- Google Calendar -->
+      <section class="card">
+        <h3>Google Calendar <span class="pill">Free</span></h3>
+        <p>
+          Create a calendar named “Jobs” and share it so the assistant can add
+          and move bookings.
+        </p>
+        <div class="steps">
+          <div class="step">
+            <div class="check" data-id="gcal-1"></div>
+            <span><b>Create “Jobs”</b> in Google Calendar</span>
+          </div>
+          <div class="step">
+            <div class="check" data-id="gcal-2"></div>
+            <span
+              ><b>Share</b> with
+              <span class="path">ivanaguilarmari@gmail.com</span> and set
+              permission <b>Make changes to events</b></span
+            >
+          </div>
+        </div>
+        <div class="small">
+          Optional add others later if you want someone else to see bookings.
+        </div>
+      </section>
+
+      <!-- Google Business Profile -->
+      <section class="card">
+        <h3>Google Business Profile <span class="pill">Free</span></h3>
+        <p>
+          Add me as Manager so I can help tidy services, hours, photos, and reply
+          to reviews.
+        </p>
+        <div class="steps">
+          <div class="step">
+            <div class="check" data-id="gbp-1"></div>
+            <span
+              >Open <b>business.google.com</b> → Settings →
+              <b>People & access</b> → Add Manager<br />
+              Enter <span class="path">ivanaguilarmari@gmail.com</span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Google Drive -->
+      <section class="card">
+        <h3>Google Drive / Sheets <span class="pill">Free</span></h3>
+        <p>
+          Create a folder for the project. We will keep three tabs there called
+          Customers, Jobs, Payments.
+        </p>
+        <div class="steps">
+          <div class="step">
+            <div class="check" data-id="gdrive-1"></div>
+            <span
+              >Create folder <span class="path">HJZ Automation</span> in Google
+              Drive</span
+            >
+          </div>
+          <div class="step">
+            <div class="check" data-id="gdrive-2"></div>
+            <span
+              >Share the folder as <b>Editor</b> with
+              <span class="path">ivanaguilarmari@gmail.com</span></span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Stripe -->
+      <section class="card">
+        <h3>Stripe <span class="pill">Pay-as-you-go</span></h3>
+        <p>
+          We will create deposit and balance links and invoices. You keep
+          payouts to your bank.
+        </p>
+        <div class="steps">
+          <div class="step">
+            <div class="check" data-id="stripe-1"></div>
+            <span
+              >In Dashboard → Settings → <b>Team and security</b> →
+              <b>Add member</b><br />
+              Invite <span class="path">ivanaguilarmari@gmail.com</span> with
+              role <b>Developer</b></span
+            >
+          </div>
+        </div>
+        <div class="cta-row small">
+          <button class="copy" data-copy="ivanaguilarmari@gmail.com">
+            Copy invite email
+          </button>
+        </div>
+      </section>
+
+      <!-- WhatsApp -->
+      <section class="card">
+        <h3>WhatsApp Business <span class="pill">Start free</span></h3>
+        <p>
+          Begin with the phone app and link WhatsApp Web during our call. <b>Why I need access:</b> I'll set up quick replies and automated responses that handle customer inquiries about bookings, pricing, and availability - saving you hours of manual messaging every week.
+        </p>
+        <details style="margin-top: 8px">
+          <summary>How we link WhatsApp Web during a video call</summary>
+          <p>
+            I will share a screen with the QR code. On your phone open WhatsApp
+            Business → Settings → Linked devices → Link a device and scan the
+            QR. You can unlink at any time.
+          </p>
+        </details>
+        <div class="steps">
+          <div class="step">
+            <div class="check" data-id="wa-1"></div>
+            <span
+              >Have WhatsApp Business installed on your phone and open it during
+              the call</span
+            >
+          </div>
+          <div class="step">
+            <div class="check" data-id="wa-2"></div>
+            <span>We link WhatsApp Web and add quick replies together</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ElevenLabs -->
+      <section class="card">
+        <h3>ElevenLabs <span class="pill">Plan: Creator</span></h3>
+        <p>
+          Natural voice for calls. Creator plan gives us API and optional voice
+          cloning if you want it.
+        </p>
+        <div class="steps">
+          <div class="step">
+            <div class="check" data-id="11l-1"></div>
+            <span
+              >Create an account in your name and subscribe to
+              <b>Creator</b></span
+            >
+          </div>
+          <div class="step">
+            <div class="check" data-id="11l-2"></div>
+            <span
+              >Profile → API Keys → <b>Create “Ivan Setup”</b><br />
+              Enable <b>Text-to-Speech, Voice Agents, Voice Library</b> and set
+              a monthly cap. Share securely.</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Airtable -->
+      <section class="card">
+        <h3>Airtable <span class="pill">Recommended • Free to start</span></h3>
+        <p>
+          Please create this account now to save time later. Airtable gives us nicer views and forms compared to Google Sheets, and we may want to use these features as we build out your system.
+        </p>
+        <div class="steps">
+          <div class="step">
+            <div class="check" data-id="air-1"></div>
+            <span
+              ><b>Sign up at airtable.com</b> using your email (create a free account)</span
+            >
+          </div>
+          <div class="step">
+            <div class="check" data-id="air-2"></div>
+            <span
+              >Create a base named <span class="path">HJZ Automation</span> with
+              three tables: Customers, Jobs, Payments</span
+            >
+          </div>
+          <div class="step">
+            <div class="check" data-id="air-3"></div>
+            <span
+              >Share → Invite <span class="path">ivanaguilarmari@gmail.com</span> as
+              <b>Editor</b> so I can help set up the structure</span
+            >
+          </div>
+        </div>
+        <div class="cta-row small">
+          <button class="copy" data-copy="ivanaguilarmari@gmail.com">
+            Copy invite email
+          </button>
+        </div>
+      </section>
+
+      <!-- Twilio -->
+      <section class="card">
+        <h3>Twilio <span class="pill">Recommended • Pay-as-you-go</span></h3>
+        <p>
+          Please create this account now to save time later. Twilio provides a UK business number with routing and SMS capabilities, plus we may want to use the WhatsApp Business Platform for automatic messaging in the future. It's pay-as-you-go, so no upfront costs.
+        </p>
+        <div class="steps">
+          <div class="step">
+            <div class="check" data-id="twi-1"></div>
+            <span
+              ><b>Sign up at twilio.com</b> and create an account in your name</span
+            >
+          </div>
+          <div class="step">
+            <div class="check" data-id="twi-2"></div>
+            <span>Complete account verification (ID and business details)</span>
+          </div>
+          <div class="step">
+            <div class="check" data-id="twi-3"></div>
+            <span
+              >Console → Account → Users & Permissions → Add User<br />
+              Invite <span class="path">ivanaguilarmari@gmail.com</span> with
+              <b>Developer</b> role so I can help set up phone numbers and messaging</span
+            >
+          </div>
+        </div>
+        <div class="cta-row small">
+          <button class="copy" data-copy="ivanaguilarmari@gmail.com">
+            Copy invite email
+          </button>
+        </div>
+      </section>
+
+      <!-- WordPress -->
+      <section class="card">
+        <h3>WordPress <span class="pill">Keep current hosting</span></h3>
+        <p>
+          Your site already has Call, WhatsApp, and Book buttons. I need access to further optimize the site, improve page speed, and ensure everything integrates smoothly with the automation system.
+        </p>
+        <div class="steps">
+          <div class="step">
+            <div class="check" data-id="wp-1"></div>
+            <span
+              >Users → Add New → create an account for me as
+              <b>Administrator</b> for setup<br /><span class="small"
+                >After go-live, I will switch to a safer role like
+                Editor</span
+              ></span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- CHOICES -->
+      <h2 style="margin: 18px 4px">Choices for Henry</h2>
+      <section class="card choices">
+        <div class="choice">
+          <b>Working hours and arrival window</b>
+          <div class="radio-row">
+            <input type="radio" name="hours" id="hours-now" />
+            <label for="hours-now">Answer now</label>
+            <div class="answer">
+              <textarea
+                placeholder="Write your working days and earliest/latest arrival"
+              ></textarea>
+            </div>
+          </div>
+          <div class="radio-row">
+            <input type="radio" name="hours" id="hours-site" />
+            <label for="hours-site">Use my website/Google to get this info</label>
+          </div>
+        </div>
+
+        <div class="choice">
+          <b>Service areas</b>
+          <div class="radio-row">
+            <input type="radio" name="areas" id="areas-now" />
+            <label for="areas-now">Answer now</label>
+            <div class="answer">
+              <textarea
+                placeholder="List postcodes or areas"
+              ></textarea>
+            </div>
+          </div>
+          <div class="radio-row">
+            <input type="radio" name="areas" id="areas-site" />
+            <label for="areas-site">Use my website/Google to get this info</label>
+          </div>
+        </div>
+
+        <div class="choice">
+          <b>Deposit amount and refund rules</b>
+          <div class="radio-row">
+            <input type="radio" name="deposit" id="dep-now" />
+            <label for="dep-now">Answer now</label>
+            <div class="answer">
+              <textarea
+                placeholder="Example: £30 to hold a slot. Refundable if cancelled 24h before."
+              ></textarea>
+            </div>
+          </div>
+          <div class="radio-row">
+            <input type="radio" name="deposit" id="dep-later" />
+            <label for="dep-later"
+              >Use current practice (I'll find it on your site)</label
+            >
+          </div>
+        </div>
+
+        <div class="choice">
+          <b>Where bookings appear first</b>
+          <div class="radio-row">
+            <input type="radio" name="store" id="store-servicem8" />
+            <label for="store-servicem8">ServiceM8 schedule</label>
+          </div>
+          <div class="radio-row">
+            <input type="radio" name="store" id="store-gcal" />
+            <label for="store-gcal">Google Calendar “Jobs”</label>
+          </div>
+          <div class="radio-row">
+            <input type="radio" name="store" id="store-both" />
+            <label for="store-both">Both</label>
+          </div>
+        </div>
+
+        <div class="choice">
+          <b>WhatsApp now or later</b>
+          <div class="radio-row">
+            <input type="radio" name="wa" id="wa-app" />
+            <label for="wa-app">Start with the phone app</label>
+          </div>
+          <div class="radio-row">
+            <input type="radio" name="wa" id="wa-platform" />
+            <label for="wa-platform"
+              >Move to the Business Platform later for automatic messages</label
+            >
+          </div>
+        </div>
+
+        <div class="choice">
+          <b>Use your own voice for calls</b>
+          <div class="radio-row">
+            <input type="radio" name="voice" id="voice-yes" />
+            <label for="voice-yes">Yes, clone my voice</label>
+          </div>
+          <div class="radio-row">
+            <input type="radio" name="voice" id="voice-no" />
+            <label for="voice-no">No, use a standard voice</label>
+          </div>
+        </div>
+      </section>
+
+      <p class="footer-note">
+        Everything stays in your name. You can remove my access at any time.
+      </p>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
